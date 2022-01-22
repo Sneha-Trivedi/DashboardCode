@@ -1,0 +1,53 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+   
+}
+.container{
+    box-shadow: 10px 10px 20px grey;
+    width:40vw;
+    background-color: #fefefe;
+    margin-top: 8%;
+    
+    
+}
+.btn-next{
+    width:180px;
+    background-color:#29487d;
+    color:white;
+    padding:5px;
+    border:none;
+    font-size: 20px;
+    justify-content: center;
+}
+.btn-next:hover{
+    border:1px solid #29487d ;
+    background-color: #3c5898;
+    color:#fefefe;
+}
+.reg-had{
+    color:#29487d;
+}
+.menu-reg span{
+    color:#29487d;
+    border-bottom:  3px solid#3c5898;
+    font-weight:25px;
+}
+.focus{
+    outline:none;
+}
+.send{
+    border:0;
+    padding:7px 0;
+    border-bottom: 1px solid #29487d;
+
+}
+@media (max-width: 767.98px) {
+    .container{
+        width:100vw;
+    }
+}
+input[type=date]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+}
