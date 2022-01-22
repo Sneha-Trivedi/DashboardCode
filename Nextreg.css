@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    height:60vh !important;
+    width:50vw;
+    box-shadow: 10px 10px 20px grey;
+    margin:auto;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+h1{
+    color:#29487d;
+}
+.fees{
+    margin-left: 10%;
+    color:#29487d;
+    
+}
+.fees span{
+    border-bottom: 3px solid #3c5898;
+}
+.pay{
+    margin-left:10%;
+}
+.next{
+    width:180px;
+    background-color:#29487d;
+    color:white;
+    padding:5px;
+    border:none;
+    font-size: 20px;
+    justify-content: center;
+    margin-top: 10%;
+}
+.next:hover{
+    border:1px solid #29487d ;
+    background-color: #3c5898;
+    color:#fefefe;
+}
+@media (max-width: 575.98px) {
+    .main{
+        width:100vw;
+    }
+ }
