@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    height:60vh !important;
+    width:50vw;
+    box-shadow: 10px 10px 20px grey;
+    margin:auto;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    border-radius: 10px;
+}
+h1{
+    color:#29487d;
+}
+.fees{
+    margin-left: 10%;
+    color:#29487d;
+    
+}
+.fees span{
+    border-bottom: 3px solid #3c5898;
+}
+.pay{
+    margin-left:10%;
+}
+.next{
+    width:180px;
+    background-color:#29487d;
+    color:white;
+    padding:5px;
+    border:none;
+    font-size: 20px;
+    justify-content: center;
+}
+.next:hover{
+    border:1px solid #29487d ;
+    background-color: #3c5898;
+    color:#fefefe;
+}
+.paydiv{
+    width:200px;
+    height:100px;
+    background-color:#9cb2ce ;
+    text-align: center;
+    margin: auto;
+    color:#29487d;
+    border-radius: 5px;
+    align-items: center;
+    padding-top:20px ;
+}
+@media (max-width: 575.98px) {
+    .main{
+        width:100vw;
+    }
+}
