@@ -1,10 +1,13 @@
 import React from "react";
 import "./Sidebar.css";
 import { AiFillFacebook, AiFillLinkedin } from "react-icons/ai";
-import profile from '../images/profile-2.png';
+import profile from "../images/profile-2.png";
 import { BsTwitter } from "react-icons/bs";
-import {FaRegistered} from "react-icons/fa";
+import { FaRegistered } from "react-icons/fa";
+import logo from "../images/Print Template-14.png";
+import { Link } from "react-router-dom";
 
+import {BiLocationPlus} from 'react-icons/bi'
 
 const Sidebar = () => {
   return (
@@ -41,16 +44,20 @@ const Sidebar = () => {
 
                 <div class="app-utilities col-auto">
                   <div class="app-utility-item app-notifications-dropdown dropdown">
-                    <a href="">
-                    <FaRegistered size="25px"/> Registration
-                    </a>
-                    <button type="button" class="second-btn">
+                    <Link to="Info">
+                      
+                      Registration
+                    </Link>
+                    <Link to="#">
+                    <button type="button" className="second-btn">
                       Login
                     </button>
+                    </Link>
+                    <Link to="#">
                     <button type="button" class="first-btn">
                       Sign Up
                     </button>
-
+                    </Link>
                     <a
                       class="dropdown-toggle no-toggle-arrow"
                       id="notifications-dropdown-toggle"
@@ -175,11 +182,7 @@ const Sidebar = () => {
                         <div class="item p-3">
                           <div class="row gx-2 justify-content-between align-items-center">
                             <div class="col-auto">
-                              <img
-                                class="profile-image"
-                                src=""
-                                alt=""
-                              />
+                              <img class="profile-image" src="" alt="" />
                             </div>
                             <div class="col">
                               <div class="info">
@@ -209,10 +212,7 @@ const Sidebar = () => {
                       role="button"
                       aria-expanded="false"
                     >
-                      <img
-                        src={profile}
-                        alt="user profile"
-                      />
+                      <img src={profile} alt="user profile" />
                     </a>
                     <ul
                       class="dropdown-menu"
@@ -220,12 +220,12 @@ const Sidebar = () => {
                     >
                       <li>
                         <a class="dropdown-item" href="account.html">
-                          Account
+                          Profile
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="settings.html">
-                          Settings
+                        <a class="dropdown-item " href="settings.html">
+                          Login
                         </a>
                       </li>
                       <li>
@@ -251,11 +251,7 @@ const Sidebar = () => {
             </a>
             <div class="app-branding">
               <a class="app-logo" href="index.html">
-                <img
-                  class="logo-icon me-2"
-                  src="assets/images/app-logo.svg"
-                  alt="logo"
-                />
+                <img class="logo-icon " src={logo} alt="logo" />
                 {/* <span className="logo-text">ITEG Management</span> */}
               </a>
             </div>
@@ -266,8 +262,8 @@ const Sidebar = () => {
                   <a class="nav-link active" href="index.html">
                     <span class="nav-icon">
                       <svg
-                        width="1em"
-                        height="1em"
+                        width="2em"
+                        height="2em"
                         viewBox="0 0 16 16"
                         class="bi bi-house-door"
                         fill="currentColor"
@@ -305,47 +301,79 @@ const Sidebar = () => {
                         ></path>
                       </svg>
                     </span>
-                    <span class="nav-link-text">Academic</span>
+                    <Link to="acad">
+                      <span class="nav-link-text">Academic</span>
+                    </Link>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="orders.html">
+                  <a class="nav-link">
                     <span class="nav-icon">
-                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shield-alt" class="svg-inline--fa fa-shield-alt fa-w-16 bi bi-card-list" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3zM256.1 446.3l-.1-381 175.9 73.3c-3.3 151.4-82.1 261.1-175.8 307.7z"></path></svg>
+                      <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="shield-alt"
+                        class="svg-inline--fa fa-shield-alt fa-w-16 bi bi-card-list"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3zM256.1 446.3l-.1-381 175.9 73.3c-3.3 151.4-82.1 261.1-175.8 307.7z"
+                        ></path>
+                      </svg>
                     </span>
-                    <span class="nav-link-text">Management</span>
+                    <Link to="mang">
+                      <span class="nav-link-text">Management</span>
+                    </Link>
                   </a>
                 </li>
-                <li class="nav-item has-submenu">
-                  <a
-                    class="nav-link submenu-toggle"
-                    href="#"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#submenu-1"
-                    aria-expanded="false"
-                    aria-controls="submenu-1"
-                  >
-                    <span class="nav-icon">
-                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="paypal" class="svg-inline--fa fa-paypal fa-w-12 bi bi-files" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4.7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9.7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z"></path></svg>
+                <li class="nav-item">
+                  <a class="nav-link">
+                  <span class="nav-icon">
+                      <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fab"
+                        data-icon="paypal"
+                        class="svg-inline--fa fa-paypal fa-w-12 bi bi-files"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 384 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4.7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9.7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z"
+                        ></path>
+                      </svg>
                     </span>
-                    <span class="nav-link-text">Payments</span>
+                    <Link to="pay">
+                      <span class="nav-link-text">Payments</span>
+                    </Link>
                   </a>
                 </li>
-                <li class="nav-item has-submenu">
-                  <a
-                    class="nav-link submenu-toggle"
-                    href="#"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#submenu-2"
-                    aria-expanded="false"
-                    aria-controls="submenu-2"
-                  >
-                    <span class="nav-icon">
-                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marker-alt" class="svg-inline--fa fa-map-marker-alt fa-w-12 bi bi-columns-gap" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>
+                <li class="nav-item">
+                  <a class="nav-link">
+                  <span class="nav-icon">
+                  <svg   aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fab"
+                        data-icon="paypal"
+                        class="svg-inline--fa fa-paypal fa-w-12 bi bi-files"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path  fill="currentColor" d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z" /></svg>
+                  
+                      
                     </span>
-                    <span class="nav-link-text">Placements</span>
+                    <Link to="/place">
+            
+                      <span class="nav-link-text">Placements</span>
+                    </Link>
                   </a>
                 </li>
+              
               </ul>
             </nav>
             <div class="app-sidepanel-footer">
@@ -373,15 +401,16 @@ const Sidebar = () => {
 
       {/* <div class="app-wrapper">
         <div class="app-content pt-3 p-md-3 p-lg-4">
-          <div class="container-xl">
-            <h1 class="app-page-title">hello</h1>
-<h1>loremdxffffffffffffffffffffffffffffffffffffffffffffffffff</h1>
-            <a class="app-card-link-mask" href="#"></a>
-          </div>
-        </div>
-      </div>
-    </div> */}
-    </div>
+          <div class="container-xl"> */}
+            {/* <Cards />
+            <Meet />
+            <Course />
+            <Best/> */}
+            {/* <a class="app-card-link-mask" href="#"></a> */}
+          {/* </div> */}
+      //   </div>
+      // </div>
+    // </div>
   );
 };
 

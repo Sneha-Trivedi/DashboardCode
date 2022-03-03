@@ -8970,7 +8970,7 @@ h6,
 }
 a {
 	color: #15a362;
-	text-decoration: none;
+	text-decoration: none !important;
 }
 a:hover {
 	color: #128c54;
@@ -8983,7 +8983,7 @@ hr {
 }
 a.app-link {
 	color: #252930;
-	text-decoration: underline;
+	text-decoration: none;
 	-webkit-text-decoration-color: rgba(37, 41, 48, 0.3);
 	text-decoration-color: rgba(37, 41, 48, 0.3);
 }
@@ -9233,7 +9233,7 @@ button.close:focus {
 	left: 0;
 	top: 0;
 	font-size: 0.875rem;
-	border-right: 1px solid #e7e9ed;
+	/* border-right: 1px solid #e7e9ed; */
 }
 .app-sidepanel .panel-drop {
 	display: none;
@@ -9275,14 +9275,15 @@ button.close:focus {
 	border-radius: 0.5rem;
 }
 .app-branding {
-	height: 60px;
+	height: 100px;
 	padding-top: 1rem;
 	padding-left: 1rem;
 	margin-bottom: 1rem;
 }
 .app-branding .logo-icon {
-	width: 36px;
-	height: 36px;
+	width: 150px;
+	height: 70px;
+	
 }
 .app-branding .logo-text {
 	color: #252930;
@@ -9308,7 +9309,7 @@ button.close:focus {
 }
 .app-nav .nav-link {
 	display: block;
-	padding: 0.875rem 1rem;
+	padding: 0.875rem 3rem;
 	color: #fefefe;
 	position: relative;
 	display: block;
@@ -9318,7 +9319,7 @@ button.close:focus {
 .app-nav .nav-link.active {
 	color: #fefefe;
 
-	border-left: 3px solid #15a362;
+	/* border-left: 3px solid #15a362; */
 	font-weight: 500;
 }
 .app-nav .nav-link.submenu-toggle.active {
@@ -9593,3 +9594,50 @@ button.close:focus {
 a .logo-text{
 	 color:#fefefe;
  } */
+  @media (max-width: 320.98px) {
+	/* .app-utility-item > a
+	{
+		display:none;
+	} */
+	/* .reg{
+		display:none;
+	} */
+	/* .app-utility-item app-notifications-dropdown {
+		display:none
+	} */
+	.sidepanel-toggler{
+		color:white;
+	}
+  }
+  @media (max-width: 375.98px){
+	
+	.app-notifications-dropdown{
+		display:none
+	}
+	.sidepanel-toggler{
+		color:white;
+	}
+  }
+  @media (max-width: 425.98px){
+	.app-notifications-dropdown{
+		display:none
+	}
+	.sidepanel-toggler{
+		color:white;
+	}
+	
+  }
+  .sidepanel-toggler{
+	color:white;
+}
+.nav-link-text{
+	color:white;
+	font-size: 15px;
+	
+}
+.nav-icon{
+	color:white;
+}
+body{
+	background-color: #ebe6e6 !important;
+}
